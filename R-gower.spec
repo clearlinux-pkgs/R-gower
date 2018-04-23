@@ -4,7 +4,7 @@
 #
 Name     : R-gower
 Version  : 0.1.2
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/gower_0.1.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/gower_0.1.2.tar.gz
 Summary  : Gower's Distance
