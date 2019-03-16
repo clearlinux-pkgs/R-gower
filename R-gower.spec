@@ -4,7 +4,7 @@
 #
 Name     : R-gower
 Version  : 0.2.0
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/gower_0.2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/gower_0.2.0.tar.gz
 Summary  : Gower's Distance
@@ -33,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552070249
+export SOURCE_DATE_EPOCH=1552763981
 
 %install
-export SOURCE_DATE_EPOCH=1552070249
+export SOURCE_DATE_EPOCH=1552763981
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library gower|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  gower || :
 
 
 %files
@@ -103,7 +102,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/gower/help/paths.rds
 /usr/lib64/R/library/gower/html/00Index.html
 /usr/lib64/R/library/gower/html/R.css
-/usr/lib64/R/library/gower/libs/symbols.rds
+/usr/lib64/R/library/gower/tests/testthat.R
+/usr/lib64/R/library/gower/tests/testthat/test_gower.R
 
 %files lib
 %defattr(-,root,root,-)
